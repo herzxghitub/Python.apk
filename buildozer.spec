@@ -15,8 +15,8 @@ source.dir = .
 # TAMBAHKAN BARIS INI - tentukan file utama
 source.main = wifi.py
 
-# (list) Source files to include (let empty to include all files)
-source.include_exts = py,png,jpg,kv,atlas,python3,kivy,openssl
+# YANG BENAR:
+source.include_exts = py,png,jpg,kv,atlas,txt,dat
 
 # (list) List of inclusions using pattern matching
 #source.include_patterns = assets/*,images/*.png
