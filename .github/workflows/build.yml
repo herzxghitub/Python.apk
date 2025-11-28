@@ -1,0 +1,21 @@
+name: Build APK with Buildozer
+on: [push, workflow_dispatch]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Build APK
+      uses: ArtemSBulgakov/buildozer-action@v1.5.0
+      with:
+        work-dir: ./
+        buildozer-version: main
+        
+    - name: Upload APK
+      uses: actions/upload-artifact@v4
+      with:
+        name: Android-APK
+        path: bin/*.apk
+        retention-days: 30
